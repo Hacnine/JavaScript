@@ -1,0 +1,41 @@
+/* .main-element {
+    position: static;
+    left: 10px;
+    bottom: 10px;
+    background-color: yellow;
+    padding: 10px;
+} */
+
+/* .main-element {
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.sibling-element {
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+ */
+ .main-element {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.parent-element {
+    position: relative;
+    height: 100px;
+    padding: 10px;
+    background-color: #81adc8;
+}
+
+.sibling-element {
+	background: #f2f2f2;
+	padding: 10px;
+    border: 1px solid #81adc8;
+}

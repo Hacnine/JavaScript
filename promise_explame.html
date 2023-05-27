@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function getName(name, callback){
+        return new Promise((resolve, reject) =>{
+          setTimeout(() => {
+            console.log("Inside Name setTimeOut")
+            resolve(name);
+          }, 2000);
+        })
+      }
+
+      function getHobbies(name, callback){
+        return new Promise((resolve, reject) =>{
+          setTimeout(() => {
+            console.log("Inside Hobbies setTimeOut")
+            resolve(['Reading', 'Planting']);
+          }, 1000);
+        })
+      }
+
+      <!-- Promise  -->
+      //  getName('Tushar')
+      // .then(nm => getHobbies(nm))
+      // .then(hobby => console.log(hobby))
+
+      <!-- To get rid of Promise use async -->
+
+     async function showHobby() {
+       const nm = await getName('Tushar')
+       const hobby = await getHobbies(nm)
+       console.log(hobby)
+     }
+
+     showHobby();
+      // const nm = getName('Sonam', (nm) => {getHobbies(nm, hobby =>
+      //    {console.log(hobby)}) })
+         console.log("end")
+    </script>
+  </body>
+</html>

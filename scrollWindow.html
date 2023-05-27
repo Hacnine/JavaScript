@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="one">Chage my color.</p>
+    <p id="myp"></p>
+    <button type="button" name="button" id="btn">Clear</button>
+    <button type="button" name="button" id="btn2">Clear Interval</button>
+
+    <div id="mydiv">
+
+    </div>
+    <script type="text/javascript">
+
+    var timeoutID = setTimeout(function (){
+      document.getElementById("one").style = "color: yellow";
+    }, 3000);
+
+    function clearAll(){
+      clearTimeout(timeoutID);
+    }
+    document.getElementById("btn").addEventListener("click", clearAll);
+
+    var intervalID = setInterval(() => {
+      document.getElementById("myp").textContent += " Hello";
+    }, 2000);
+
+
+
+    document.getElementById("btn2").addEventListener("click", () =>{
+    clearInterval(intervalID);
+    });
+
+     function show(){
+      document.getElementById("mydiv").textContent = "hello window";
+    }
+    window.addEventListener("load", show);
+    </script>
+  </body>
+</html>

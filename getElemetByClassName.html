@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title class="one"></title>
+  </head>
+  <body>
+    <p class="one"> Mellow </p>
+    <p class="Two">world</p>
+    <div id="show">
+      <p class="one myclass"></p>
+      <p class="one">p inside div</p>
+      <p class="myclass">2nd p inside div</p>
+
+
+    </div>
+
+    <script type="text/javascript">
+      var getShow = document.getElementById("show");
+      var result = getShow.getElementsByClassName("one");
+      document.write(result);
+      console.log(result);
+
+    </script>
+  </body>
+</html>

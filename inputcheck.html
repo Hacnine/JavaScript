@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form id="myForm">
+  <input type="text" id="myInput" />
+  <button type="button" onclick="testInput()">Test Input</button>
+</form>
+<script type="text/javascript">
+  function testInput() {
+  // Get the input value
+  var inputValue = document.getElementById("myInput").value;
+
+  // Check if the input is an integer or a string
+  if (!isNaN(inputValue) && Number.isInteger(Number(inputValue))) {
+    console.log("Input is an integer.");
+  } else {
+    console.log("Input is a string.");
+  }
+
+  // Clear the form
+  document.getElementById("myForm").reset();
+}
+
+</script>
+  </body>
+</html>

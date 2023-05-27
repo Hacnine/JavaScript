@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="one" data-name="1"> 1
+      <div id="two" data-name="2"> 2
+        <div id="three" data-name="3"> 3
+          <div id="four" data-name="4"> 4
+            <a  href="http://www.facebook.com" id="mylink">Facebook</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <style media="screen">
+      #one {
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+      }
+      #two {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+      }
+      #three {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+      #four {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+      }
+    </style>
+
+    <script type="text/javascript">
+
+    function div1(e){
+      this.style.backgroundColor = 'red';
+    }
+
+    function div2(e){
+      this.style.backgroundColor = 'blue';
+      e.stopImmediatePropagation();
+    }
+
+    function div2_2(e){
+      this.style.width = '250px';
+    }
+
+    function div3(e){
+      this.style.backgroundColor = 'grey';
+    }
+
+    function div4(e){
+      this.style.backgroundColor = 'green';
+      e.stopPropagation();
+    }
+
+    function stopLink(e){
+      e.preventDefault();
+    }
+
+    var divOne = document.getElementById("one");
+    var divTwo = document.getElementById("two");
+    var divThree = document.getElementById("three");
+    var divFour = document.getElementById("four");
+
+    var mydiv = document.getElementById("mylink");
+
+    divOne.addEventListener("click", div1, false);
+    divTwo.addEventListener("click", div2, false);
+    divTwo.addEventListener("click", div2_2, false);
+    divThree.addEventListener("click", div3, false);
+    divFour.addEventListener("click", div4, false);
+
+    mydiv.addEventListener("click", stopLink, false);
+
+
+
+    </script>
+
+  </body>
+</html>

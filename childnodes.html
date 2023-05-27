@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="myid">
+<!-- This just a comment --> <span> and learning</span></h1>
+<h1>
+<!-- This just --> we are a
+</h1>
+<p id="myid1">Its a Paragaraph</p>
+<p id="myid2"><span>Its a Span</span>Its a Paragaraph</p>
+<script type="text/javascript">
+  var result = document.getElementById("myid");
+  // console.log(result.children);
+  // console.log(result.firstChild.nextElementSibling);
+  result.firstChild.nextElementSibling.textContent = "I am learning";
+
+  var commentNode = document.createComment("comment by JavaScript");
+  console.log(commentNode);
+
+  var df = document.createDocumentFragment();
+  console.log(df);
+</script>
+  </body>
+</html>

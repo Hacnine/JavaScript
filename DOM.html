@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="main">
+      <h2>HTML DOM</h2>
+      <p class="intro">Finding HTML Elements by Tag Name</p>
+      <p class="intro">This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+    </div>
+
+    <p id="demo"></p>
+    <script type="text/javascript">
+      const item = document.getElementById("main");
+      const item2 = item.getElementsByTagName("p");
+
+      document.getElementById("demo").innerHTML = item2[1].innerHTML;
+
+      const cls = document.getElementsByClassName("intro");
+      document.getElementById("demo").innerHTML = cls[1].innerHTML;
+
+    </script>
+  </body>
+</html>

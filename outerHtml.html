@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="mydiv">
+      <ul id="myul">
+        <li>Item</li>
+        <li>Item</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      var div = document.getElementById("mydiv");
+      var ul = document.getElementById("myul");
+      ul.outerHTML = "";
+      console.log(div)
+    </script>
+  </body>
+</html>

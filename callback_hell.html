@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function getName(name, callback){
+        setTimeout(() => {
+          console.log("Inside Name setTimeOut")
+          callback(name);
+        }, 2000);
+      }
+
+      function getHobbies(name, callback){
+        setTimeout(() => {
+          console.log("Inside Hobbies setTimeOut")
+          callback(name);
+        }, 1000);
+      }
+
+      const nm = getName('Sonam', (nm) => {getHobbies(nm, hobby =>
+         {console.log(hobby)}) })
+         console.log("end")
+    </script>
+  </body>
+</html>

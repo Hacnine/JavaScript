@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div id="myid">
+      <h1 id="myh1">We are learning</h1>
+    </div>
+    <section id="mysec">
+
+    </section>
+
+    <script type="text/javascript">
+      // Append existing element
+      var myid = document.getElementById("myid");
+      var mysec = document.getElementById("mysec");
+      var myh1 = document.getElementById("myh1");
+
+      mysec.appendChild(myh1);
+      console.log(mysec);
+      console.log(myid);
+
+      // Creating new element
+      var newNode = document.createElement("h2");
+      var tergetNode = document.getElementById("mysec");
+      tergetNode.appendChild(newNode);
+      console.log(tergetNode);
+
+      // create textNode
+      var newTextNode = document.createTextNode("Text by me");
+      tergetNode.appendChild(newTextNode);
+      console.log(tergetNode);
+
+    </script>
+  </body>
+</html>

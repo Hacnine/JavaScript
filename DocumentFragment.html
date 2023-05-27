@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="myid">
+      <h1>We are learning Javascript</h1>
+      <h1>Its h1</h1>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+      var df = document.createDocumentFragment();
+
+      var hNode  = document.createElement("h3");
+
+      var pNode = document.createElement("p");
+
+      hNode.textContent = "H3 from js";
+      pNode.textContent = "p from JS";
+
+      df.appendChild(hNode);
+      df.appendChild(pNode);
+
+      // console.log(df);
+      targetNode = document.getElementById("myid");
+      targetNode.appendChild(df);
+    </script>
+
+  </body>
+</html>

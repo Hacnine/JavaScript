@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="myid">javascript     <!-- This is comment --> </h1>
+    <p id="myid1">Paragaraph</p>
+    <script type="text/javascript">
+      document.write("----Document---- <br> <br>");
+      document.write(document.nodeName + "<br>");
+      document.write(document.nodeValue + "<br>");
+      document.write(document.nodeType + "<br>");
+
+      document.write("----Element---- <br> <br>");
+      var elm = document.getElementById("myid");
+      document.write(elm.nodeName + "<br>");
+      document.write(elm.nodeValue + "<br>");
+      document.write(elm.nodeType + "<br>");
+
+      document.write("----Text---- <br> <br>");
+      var elm = document.getElementById("myid");
+      document.write(elm.firstChild.nodeName + "<br>");
+      document.write(elm.firstChild.nodeValue + "<br>");
+      document.write(elm.firstChild.nodeType + "<br>");
+
+
+      var txt = document.getElementById("myid").firstChild.nodeValue = "This is Value";
+      document.write(txt);
+      </script>
+  </body>
+</html>

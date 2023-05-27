@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>"
+  </head>
+  <body>
+    <div id="myid">
+      <ul id="myul">
+        <li>li one</li>
+        <li id="two">li two</li>
+        <li id="three">li three</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      var parentNode = document.getElementById("myul");
+      // var newNode = document.createElement("li");
+      // newNode.textContent="four";
+      var insertNode = document.getElementById("three");
+      var refNode = document.getElementById("two");
+
+      parentNode.insertBefore(insertNode, refNode);
+
+    </script>
+  </body>
+</html>

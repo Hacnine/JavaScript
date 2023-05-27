@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Event Handling</h1>
+    <button type="button" id="button1" name="button">Clcik Me</button>
+
+    <script type="text/javascript">
+    function disp1(){
+      alert("Button is clicked");
+    }
+    function disp2(){
+      alert("Button is clicked Second time");
+    }
+
+    var btn = document.getElementById("button1");
+    btn.addEventListener("click", disp1,false);
+    btn.addEventListener("click", disp1, true);
+
+    btn.removeEventListener("click", disp1, true);
+
+
+
+    </script>
+  </body>
+</html>

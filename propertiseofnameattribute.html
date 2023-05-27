@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="myid" class="myclass">We are learning JS <!-- Comment --> </h1>
+    <p id="myid1">Paragaraph</p>
+    <script type="text/javascript">
+      var result = document.getElementById("myid");
+      // var getAttr = result.attributes[1].nodeValue;
+      // document.write(getAttr);
+      var getAttr = result.attributes.length;
+      for(var i = 0; i < getAttr; i++){
+        document.write(result.attributes[i].name + "=");
+        document.write(result.attributes[i].value + "<br>");
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      console.log('start')
+      function getName(name, callback){
+        setTimeout(()=>{
+          console.log("Inside settimeout")
+          callback(name);
+        }, 100)
+      }
+
+      function getRoll(roll, callback){
+        setTimeout(() => {
+          console.log('Inside Out')
+          callback([100, 102]);
+        })
+      }
+
+            const value = getName("Bouri", (valu)=>{  console.log(valu);
+                          getRoll(valu, (hobby) => {console.log(hobby) })  });
+
+
+      console.log('end')
+    </script>
+  </body>
+</html>

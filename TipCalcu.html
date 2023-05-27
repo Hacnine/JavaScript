@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <link rel="stylesheet" href="TipCalcu_style.css">
+
+  <body>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+
+  <div class="center">
+    <div class="hide_div" id="hide_div">
+      Tip:<p id="tip_para"></p>
+      Total Amount: <p id="total_amount"></p>
+      Tip Per Person: <p id="tipperperson"></p>
+      Total Per Person:<p id="totalperperson"></p>
+    </div>
+    <form class="" action="" name="myform" id="myformid" method="post">
+      <br><br>
+      Price: <input type="text" name="u_field" id="price_id"><small id="u_small"></small><br><br>
+      Tip %: <input type="text" name="u_field" id="tip_id"><small id="u_small"></small><br><br>
+      Number of People: <input type="text" name="people_id" id="people_id"><small id="u_small"></small><br><br>
+
+      <button type="button" name="button" onclick="hideStyle()" id="btn_calculate">Calculate</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    price = document.getElementById("price_id");
+    tip = document.getElementById("tip_id");
+    people = document.getElementById("people_id")
+    btn_calculate = document.getElementById("btn_calculate");
+
+
+    function show(){
+      tip_value = tip.value*price.value/100
+      // console.log(typeof price.value);
+      tip_para.innerHTML = (tip_value).toFixed(2);
+      people_value = Number(people.value);
+      total = tip_value + Number(price.value);
+      total_amount.innerHTML = (total).toFixed(2);
+      tipperperson.innerHTML =  (tip_value/people_value).toFixed(2);
+      totalperperson.innerHTML = (total/ people_value).toFixed(2);
+    }
+
+    function hideStyle(){
+       var element = document.getElementById("hide_div");
+       if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+}
+
+    btn_calculate.addEventListener("click", show);
+
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Async</h3>
+    <script type="text/javascript">
+
+      function geeky(b, callback){
+        callback(b,callback)
+      }
+
+      geeky(40, a => console.log(a) );
+
+    </script>
+  </body>
+</html>
+
+<!--       console.log("start");
+
+      function getName(name, callback){
+        setTimeout( () =>{
+          console.log("Inside SetTimeOut");
+          callback(name);
+        }, 2000);
+      }
+
+      const nm = getName("Sonam", (nm) => {console.log(nm)})
+
+
+      console.log("End") -->
+
+
+
+
+      <!--
+
+
+
+      function show(a){
+                console.log(a)
+              }
+
+         function geeky(b, callback){
+              callback(b,callback)
+            }
+
+            geeky(40,  show );
+
+
+
+      ////
+
+            function geeky(b, callback){
+              callback(b,callback)
+            }
+
+            geeky(40,   function show(a){
+                console.log(a)
+              });
+
+      ////
+
+
+         function geeky(b, callback){
+              callback(b,callback)
+            }
+
+            geeky(40,   function (a){
+                console.log(a)
+              });
+      ////
+
+       function geeky(b, callback){
+              callback(b,callback)
+            }
+
+      geeky(40,   a =>
+                console.log(a));
+
+
+     -->

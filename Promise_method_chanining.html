@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const PromiseObj = new Promise((resolve, reject) => {
+        let num = 10;
+        resolve(num)
+      }).then(
+      value => {
+        console.log(value);
+        return value + 10;
+      }).then(
+      (value) => {console.log(value);}
+      )
+    </script>
+  </body>
+</html>

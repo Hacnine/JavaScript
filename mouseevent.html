@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Mouse</h1>
+    <div class="" id="one" style="width:100px; height:100px; background-color= red">
+      <div class="" id="two" style="width:60px; height:60px; background-color= black" >DIV
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function div1 (e){
+        console.log(e.type);
+      }
+
+      divOne = document.getElementById("one");
+      divTwo = document.getElementById("two");
+
+      divTwo.addEventListener("mousedown", div1, false);
+      divTwo.addEventListener("mouseup", div1, false);
+      divTwo.addEventListener("click", div1, false);
+      divTwo.addEventListener("dblclick", div1, false);
+      // divTwo.addEventListener("mouseenter", div1, false);
+      divTwo.addEventListener("mouseleave", div1, false);
+      divTwo.addEventListener("contextmenu", div1, false);
+
+
+
+
+    </script>
+  </body>
+</html>

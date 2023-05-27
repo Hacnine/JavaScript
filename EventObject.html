@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Event Object</h1>
+    <p id="myp">Click Me.</p>
+
+    <script type="text/javascript">
+      document.getElementById("myp").addEventListener("click", function(e) {
+        console.log(e.target);
+        console.log(e.currentTarget);
+      });
+
+    </script>
+  </body>
+</html>

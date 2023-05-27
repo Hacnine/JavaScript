@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div id="mydiv">
+      <h1 id="one">One</h1>
+      <h1 id="Two">Two</h1>
+
+      <h1 id="three">three</h1>
+
+      <script type="text/javascript">
+        var parentNode = document.getElementById("mydiv");
+        var targetElement = document.getElementById("Two");
+        var newElement = document.createElement("span");
+        newElement.textContent = " Mellow";
+        targetElement.insertAdjacentElement('afterend', newElement);
+        targetElement.insertAdjacentElement('beforeend', newElement);
+
+        console.log(parentNode);
+      </script>
+
+    </div>
+  </body>
+</html>

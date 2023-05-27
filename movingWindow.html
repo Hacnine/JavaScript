@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <button type="button" id="openBtn" name="button">Open Window</button>
+    <button type="button" id="moveBtn" name="button">Move Window</button>
+    <button type="button" name="button" id="two">focus</button>
+    <button type="button" id="three" name="button">Blur</button>
+
+
+    <script type="text/javascript">
+    var newWindow;
+    function openWin(){
+      newWindow = window.open("", "newWindow", "width=300, height=300");
+      newWindow.focus();
+    }
+
+    function moveWin(){
+      newWindow.resizeTo(200,200);
+      newWindow.focus();
+    }
+
+    function focusWin(){
+      newWindow.focus();
+    }
+
+    function blurWin(){
+      newWindow.blur();
+    }
+
+    document.getElementById("openBtn").addEventListener("click", openWin);
+    document.getElementById("moveBtn").addEventListener("click", moveWin);
+    document.getElementById("two").addEventListener("click", focusWin);
+    document.getElementById("three").addEventListener("click", blurWin);
+    </script>
+
+  </body>
+</html>
